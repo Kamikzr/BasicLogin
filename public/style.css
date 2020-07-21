@@ -1,0 +1,57 @@
+nav {
+    background-color: #a8403c;
+    color: #fff;
+    height: 50px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 999;
+}
+
+nav ul {
+    display: inline-flex;
+    float: right;
+    position: fixed;
+    right: 30px;
+    top: 13px;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 8px;
+}
+
+nav li a:hover {
+    color: yellow;
+    text-decoration: none;
+}
+
+.logo {
+    position: fixed;
+    top: 10px;
+    left: 15px;
+    cursor: pointer;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 8px;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+

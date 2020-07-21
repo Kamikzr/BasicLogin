@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <nav>
+        <a href="/"><h4 class="logo">BasicLogin Project</h4></a>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
+        </ul>
+    </nav>
+
+    <div style="margin-top: 6em;"></div>
+
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-header">
+                Register Form
+            </div>
+            <div class="card-body">
+                <form action="/auth/register" method="POST">
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" autocomplete="off" autofocus="true" placeholder="Username Here..." required>
+
+                        {{!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" autocomplete="off" placeholder="Example@outlook.com" required>
+
+                        {{!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> --}}
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" autocomplete="off" placeholder="Password Here..." required>
+
+                        <small id="passwordHelpBlock" class="form-text text-muted">
+                        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Confirm Password</label>
+                        <input type="password" class="form-control" id="passwordConfirm" name="passwordConfirm" autocomplete="off" placeholder="Repeat Your Password Here..." required>
+
+                        <small id="passwordHelpBlock" class="form-text text-muted">
+                        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                        </small>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Register</button>
+
+                </form>
+            </div>
+        </div>
+
+        {{!-- {{#each message}} --}}
+        
+        {{!-- {{/each}} --}}
+
+        {{#if message }}
+            <h4 class="alert alert-danger mt-4">{{message}}</h4>
+        {{/if}}
+
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+</body>
+</html>
